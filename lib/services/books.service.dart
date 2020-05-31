@@ -17,7 +17,7 @@ class BooksService {
 
   Future<dynamic> _getCurrentUser({bool getUID = false}) async {
     final user = await _firebaseAuth.currentUser();
-    if (user == null) throw "Use can't equal null";
+    if (user == null) throw "User can't equal null";
     if (getUID) {
       return user.uid;
     }
@@ -95,11 +95,11 @@ class BooksService {
       return coverPicDownloadLink;
     } on PlatformException catch (coverProfilePicError) {
       throw PlatformException(
-          code: "ERROR_COULDN'T_UPLOAD_COVER_PICTURE",
-          message:
-              'three was an error while taking/uploading book cover picture',
-          details:
-              "Details --> code: ${coverProfilePicError.code}: message: ${coverProfilePicError.message}");
+        code: "ERROR_COULDN'T_UPLOAD_COVER_PICTURE",
+        message: 'three was an error while taking/uploading book cover picture',
+        details:
+            "Details --> code: ${coverProfilePicError.code}: message: ${coverProfilePicError.message}",
+      );
     }
   }
 }

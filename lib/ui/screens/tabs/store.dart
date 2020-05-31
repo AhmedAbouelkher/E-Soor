@@ -21,6 +21,7 @@ class _StoreState extends State<Store> {
     );
 
     return RefreshIndicator(
+      displacement: 10,
       onRefresh: () {
         return;
       },

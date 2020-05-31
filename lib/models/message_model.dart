@@ -1,7 +1,7 @@
 import 'package:E_Soor/services/api.dart';
 
 class Message {
-  final Old_User sender;
+  final OldUser sender;
   final String time;
   final String text;
   final bool isLiked;
@@ -16,7 +16,7 @@ class Message {
   });
 }
 
-final Old_User currentUser = Old_User(
+final OldUser currentUser = OldUser(
   name: 'Omar Yehia',
   username: 'OmarYehiaDev',
   password: '1a3456',
@@ -24,49 +24,49 @@ final Old_User currentUser = Old_User(
       'https://drive.google.com/open?id=1Wcu5LK6xGHUMqVdil8H0A3I0pf18528q',
   id: 0,
 );
-final Old_User greg = Old_User(
+final OldUser greg = OldUser(
   name: 'Greg Watson',
   username: 'gRegwat?',
   password: 'gW6son',
   profileImage: 'https://randomuser.me/api/portraits/men/49.jpg',
   id: 1,
 );
-final Old_User bravestone = Old_User(
+final OldUser bravestone = OldUser(
   name: 'Doctor Bravestone',
   username: 'BraveSTONE',
   password: 'rockets',
   profileImage: 'https://randomuser.me/api/portraits/men/8.jpg',
   id: 2,
 );
-final Old_User ashley = Old_User(
+final OldUser ashley = OldUser(
   name: 'Ashley Lamar',
   username: 'SisterOfKendric',
   password: 'davidGuette1',
   profileImage: 'https://randomuser.me/api/portraits/women/51.jpg',
   id: 3,
 );
-final Old_User harry = Old_User(
+final OldUser harry = OldUser(
   name: 'Harry Potter',
   username: 'thePotter',
   password: 'ginnyWeasley1',
   profileImage: 'https://randomuser.me/api/portraits/men/60.jpg',
   id: 4,
 );
-final Old_User lily = Old_User(
+final OldUser lily = OldUser(
   name: 'Lilian Piaf',
   username: 'liliPiaf',
   password: 'edithPiaf4',
   profileImage: 'https://randomuser.me/api/portraits/women/49.jpg',
   id: 5,
 );
-final Old_User lona = Old_User(
+final OldUser lona = OldUser(
   name: 'Lona Fox',
   username: 'Lovnox',
   password: 'Lonafoxxy5',
   profileImage: 'https://randomuser.me/api/portraits/women/4.jpg',
   id: 6,
 );
-List<Old_User> favorites = [lily, harry, greg, bravestone];
+List<OldUser> favorites = [lily, harry, greg, bravestone];
 List<Message> chats = [
   Message(
     sender: greg,

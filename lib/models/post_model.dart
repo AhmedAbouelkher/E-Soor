@@ -1,7 +1,7 @@
 import 'package:E_Soor/services/api.dart';
 
 class Post {
-  final Old_User author;
+  final OldUser author;
   final String time;
   final String text;
   final bool isLiked;

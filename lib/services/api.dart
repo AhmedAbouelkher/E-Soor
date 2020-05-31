@@ -2,14 +2,14 @@ import 'dart:convert' as convert;
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
-class Old_User {
+class OldUser {
   final int id;
   final String name;
   final String password;
   final String profileImage;
   final String username;
 
-  Old_User({
+  OldUser({
     @required this.name,
     @required this.password,
     this.id,
@@ -17,8 +17,8 @@ class Old_User {
     this.username,
   });
 
-  factory Old_User.fromJson(Map<String, dynamic> json) {
-    return Old_User(
+  factory OldUser.fromJson(Map<String, dynamic> json) {
+    return OldUser(
       id: json['id'] as int,
       name: json['name'] as String,
       username: json['username'] as String,
@@ -27,8 +27,8 @@ class Old_User {
     );
   }
 
-  factory Old_User.toJson(dynamic data) {
-    return Old_User(
+  factory OldUser.toJson(dynamic data) {
+    return OldUser(
       id: data['id'] as int,
       name: data['name'] as String,
       username: data['username'] as String,
@@ -39,7 +39,7 @@ class Old_User {
 }
 
 getUsers() async {
-  List<Old_User> users = [];
+  List<OldUser> users = [];
   //var req = await http.get("http://my-json-server.typicode.com/OmarYehiaDev/E-Soor/db");
   var headers = await http.get(
       "https://api.jsonbin.io/b/5e58fd4b1534d9052ce38751",
@@ -50,7 +50,7 @@ getUsers() async {
     print(jsonString);
     final decodedUsers = convert.jsonDecode(jsonString);
     decodedUsers.forEach((v) {
-      users.add(Old_User.fromJson(v));
+      users.add(OldUser.fromJson(v));
     });
     print(users);
     users.forEach((user) {

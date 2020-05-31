@@ -14,22 +14,34 @@ class _BookMarksState extends State<BookMarks> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            elevation: 0,
-            title: Text("Book Marks",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300))),
-        body: GridView.builder(
-          itemCount: 10,
-          gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: 2 / 3, crossAxisCount: 2),
-          itemBuilder: (BuildContext context, int index) {
-            return GestureDetector(
-                onLongPress: () {
-                  dismissAlert(context);
-                },
-                child: BookItem(() {}));
-          },
-        ));
+      appBar: AppBar(
+        elevation: 0,
+        title: Text(
+          "Book Marks",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w300,
+          ),
+        ),
+      ),
+      body: GridView.builder(
+        itemCount: 10,
+        gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 4 / 6,
+        ),
+        itemBuilder: (BuildContext context, int index) {
+          return GestureDetector(
+            onLongPress: () {
+              dismissAlert(context);
+            },
+            child: BookItem(
+              () {},
+            ),
+          );
+        },
+      ),
+    );
   }
 }
 
